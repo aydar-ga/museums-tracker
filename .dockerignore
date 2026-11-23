@@ -1,6 +1,11 @@
+.git
+.github
+.claude
+.venv
 venv/
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-poetry.lock
+.pytest_cache
+.mypy_cache
