@@ -1,26 +1,34 @@
-## About 📖
+# 🖼️ Europe's Top 50 Art Museums Explorer
 
-**Museums Explorer** is a fun and engaging way to keep track of the top 50 art museums across Europe. The web app lets you mark museums as visited, explore your cultural journey, and even use search and filter options to navigate the list.
+**Track your visits to Europe's top 50 art museums.** Click a museum you've been to, watch your progress bar grow. 🎨✅
 
-This project is licensed under a Proprietary License. All rights are reserved, and you must obtain permission to use, distribute, or modify this software.
+👉 **Try it live: [museums-explorer.onrender.com](https://museums-explorer.onrender.com)**
 
-## Current Status ✔️
+> [!TIP]
+> 👉 **The newer, bigger sibling: [ArtMuse](https://artmuse.app)** — https://artmuse.app (repo: [aydar-ga/museums-eu-atlas](https://github.com/aydar-ga/museums-eu-atlas))
+> Museum detail pages, more filters, light/dark mode and optional sign-in to keep your progress across devices.
 
-The app allows you to:
+## What is this? 🤔
 
-- Mark museums as visited and track your progress.
-- Search by museum name and filter by country.
+A one-page checklist for art lovers. It lists 50 must-see art museums in 16 countries, from the Louvre 🇫🇷 and the Prado 🇪🇸 to the Rijksmuseum 🇳🇱, the Uffizi 🇮🇹 and the Munch Museum 🇳🇴. Spot one you've visited, click it, and it's yours.
 
-## Planned Enhancements 🏁
+## What you can do ✨
 
-I'm planning to implement these changes:
+- ✅ **Mark museums as visited.** Click a card to tick it off; click again to undo.
+- 📊 **See your progress.** A progress bar shows "12 out of 50 museums visited".
+- 🔎 **Search by name** and 🌍 **filter by country**, then reset both in one click.
+- 💾 **No sign-up needed.** Your ticks are saved in your browser, on this device only.
 
-- Get a personal account.
-- See museums you visited.
-- Some more exciting stuff!
+## Status 🚦
 
-## Technical Setup 🤖
+🛠️ **Maintenance mode.** This is the original 2024 app, kept online as it is. It still gets dependency updates and security fixes, but no new features.
 
-- Python (Flask) + JavaScript/HTMX
-- GitHub Actions
-- Playwright / Pytest
+🗺️ New ideas (museum detail pages, accounts, saved routes) are built in **[ArtMuse](https://artmuse.app)** instead.
+
+## For developers 🧑‍💻
+
+Built with Python/Flask and plain JavaScript. Setup, checks and deployment notes live in **[docs/DEVELOPMENT.md](docs/DEVELOPMENT.md)**.
+
+## License 📜
+
+Proprietary: all rights reserved. See [LICENSE](LICENSE).
