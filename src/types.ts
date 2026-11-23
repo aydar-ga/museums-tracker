@@ -29,6 +29,7 @@ export type User = {
 
 export type MagicLinkResponse = {
   email: string;
-  magicLink: string;
+  /** Only present for local dev delivery; emailed links are never returned. */
+  magicLink?: string;
   delivery: "email" | "dev";
 };

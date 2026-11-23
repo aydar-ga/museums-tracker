@@ -35,6 +35,8 @@ export default defineConfig({
     : {
         command: "npm run dev",
         url: baseURL,
+        // The e2e signup flow opens the returned link; production never returns it.
+        env: { AUTH_DEV_MAGIC_LINK: "1" },
         reuseExistingServer: !process.env.CI,
         timeout: 60_000,
         stdout: "pipe",

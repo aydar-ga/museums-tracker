@@ -25,7 +25,7 @@ Pages:
 
 Route handlers:
 
-- `POST /api/auth/request-link` creates a signed magic-link token. It sends via Resend when `RESEND_API_KEY` and `AUTH_EMAIL_FROM` exist; otherwise it returns a dev link.
+- `POST /api/auth/request-link` creates a signed magic-link token. It sends via Resend when `RESEND_API_KEY` and `AUTH_EMAIL_FROM` exist and never returns the link; otherwise it answers 503, unless `AUTH_DEV_MAGIC_LINK=1` (local/CI only), which returns the link for on-screen use. Tokens require `AUTH_SECRET` outside dev mode.
 - `POST /api/auth/verify-link` verifies a signed token and upserts the account in Neon when `DATABASE_URL` is configured.
 - `GET /api/healthz` returns `{ "status": "ok" }` and reports database connectivity when configured.
 

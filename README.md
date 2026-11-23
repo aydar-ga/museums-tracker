@@ -8,7 +8,7 @@ English-language Next.js app for discovering and tracking visits to 50 major Eur
 - Search plus country, city, category, planned-only, and visited-only filters.
 - Local planned/visit progress, milestone feedback, and legacy numeric-id localStorage migration.
 - Light/dark mode with header icon controls, system preference fallback, and persisted local preference.
-- Magic-link signup/sign-in using Next route handlers. In local/dev mode the link is shown directly; with `RESEND_API_KEY` and `AUTH_EMAIL_FROM`, the API can send email.
+- Magic-link signup/sign-in using Next route handlers. With `RESEND_API_KEY` and `AUTH_EMAIL_FROM` the link is emailed and never returned by the API; without them the API answers 503. Set `AUTH_DEV_MAGIC_LINK=1` (local/CI only) to show the link on screen instead.
 - Detail pages with reasons to visit, highlights, official links, online collections, source links, and image credits.
 - Local image files only, plus an SVG fallback for missing images.
 - npm-based tooling, ESLint, TypeScript build checks, Vitest unit/component tests, and Playwright e2e tests.
@@ -80,7 +80,7 @@ vercel env add AUTH_SECRET
 vercel deploy --prod
 ```
 
-Environment variables are documented in `.env.example`. Add `PUBLIC_APP_URL`, `RESEND_API_KEY`, and `AUTH_EMAIL_FROM` when real email delivery is desired.
+Environment variables are documented in `.env.example`. Add `AUTH_SECRET`, `PUBLIC_APP_URL`, `RESEND_API_KEY`, and `AUTH_EMAIL_FROM` for real email delivery; never set `AUTH_DEV_MAGIC_LINK` on a shared deployment.
 
 ## Architecture
 

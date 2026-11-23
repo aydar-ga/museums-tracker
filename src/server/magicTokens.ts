@@ -2,8 +2,23 @@ import { createHmac, timingSafeEqual } from "node:crypto";
 
 const tokenLifetimeMs = 10 * 60 * 1000;
 
+const devFallbackSecret = "local-development-secret-change-me";
+
+/** Local/CI only: show magic links in the API response instead of emailing them. */
+export function devMagicLinksEnabled(): boolean {
+  return process.env.AUTH_DEV_MAGIC_LINK === "1";
+}
+
 function secret(): string {
-  return process.env.AUTH_SECRET || "local-development-secret-change-me";
+  const configured = process.env.AUTH_SECRET?.trim();
+  if (configured) {
+    return configured;
+  }
+  if (devMagicLinksEnabled()) {
+    return devFallbackSecret;
+  }
+  // Fail closed: the built-in secret is public, so tokens signed with it are forgeable.
+  throw new Error("AUTH_SECRET is not configured.");
 }
 
 function base64url(input: string): string {
