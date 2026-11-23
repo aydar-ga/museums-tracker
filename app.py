@@ -1,10 +1,12 @@
 import os
-from flask import Flask, render_template
+from typing import Any
+
+from flask import Flask, abort, render_template
 
 app = Flask(__name__)
 
 # Static museums
-museums = [
+museums: list[dict[str, Any]] = [
     {
         "id": 0,
         "name": "Louvre Museum",
@@ -368,12 +370,14 @@ def index():
 
 @app.route("/mark-visited/<int:id>", methods=["POST"])
 def mark_visitwd(id):
+    if id >= len(museums):
+        abort(404)
     museums[id]["visited"] = True
     return "", 204  # Return a "No Content" response
 
 
 if __name__ == "__main__":
-    port = int(
-        os.environ.get("PORT", 5000)
-    )  # Use the PORT env variable or default to 5000
-    app.run(host="0.0.0.0", port=port, debug=True)
+    # Local development server only; production runs gunicorn (see Dockerfile).
+    port = int(os.environ.get("PORT", 5000))
+    debug = os.environ.get("FLASK_DEBUG") == "1"
+    app.run(host="127.0.0.1", port=port, debug=debug)
