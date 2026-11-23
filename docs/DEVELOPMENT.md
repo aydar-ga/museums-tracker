@@ -1,7 +1,8 @@
 # Development notes
 
 Technical notes for Museums Explorer. The visitor-facing overview is in the
-[README](../README.md).
+[README](../README.md). Open decisions for the repo owner are in
+[owner-actions.md](owner-actions.md).
 
 ## Stack
 
