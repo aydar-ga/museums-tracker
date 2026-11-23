@@ -5,3 +5,6 @@ __pycache__/
 
 # Virtual environment created by Poetry
 .venv
+
+# Claude Code local settings (machine-specific)
+.claude/settings.local.json
