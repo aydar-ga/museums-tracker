@@ -1,6 +1,6 @@
 # Claude Agent Guide
 
-Read `docs/AGENT_INDEX.md` first. This repository is `museums-eu-atlas`, an English Europe/global art museum atlas built with Next.js App Router, React, TypeScript, local images, magic-link auth route handlers, and browser localStorage planned/visited progress.
+This repository is public and archived; internal docs are not kept here. This repository is `museums-eu-atlas`, an English Europe/global art museum atlas built with Next.js App Router, React, TypeScript, local images, magic-link auth route handlers, and browser localStorage planned/visited progress.
 
 ## Hard Guardrails
 

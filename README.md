@@ -90,14 +90,7 @@ Read these first:
 
 - `CLAUDE.md`
 - `CODEX.md`
-- `docs/AGENT_INDEX.md`
-- `docs/ARCHITECTURE.md`
-- `docs/DEVELOPMENT.md`
-- `docs/TESTING.md`
-- `docs/DECISIONS.md`
-- `docs/ROADMAP.md`
-- `docs/DESIGN_DIRECTION.md`
-- `docs/sources.md`
+- `docs/sources.md` (image credits)
 
 ## Non-Goals
 

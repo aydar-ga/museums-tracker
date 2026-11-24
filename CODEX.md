@@ -1,6 +1,6 @@
 # Codex Agent Guide
 
-Read `docs/AGENT_INDEX.md` first. This repository is `museums-eu-atlas`, a compact Next.js App Router art museum atlas with a magic-link auth shell. It is not a Flask app and no Python runtime is part of the active stack.
+This repository is public and archived; internal docs are not kept here. This repository is `museums-eu-atlas`, a compact Next.js App Router art museum atlas with a magic-link auth shell. It is not a Flask app and no Python runtime is part of the active stack.
 
 ## Working Rules
 
